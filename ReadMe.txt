@@ -4,9 +4,9 @@ Email: subas.benakatti@gmail.com
 INPUTS:
 
 Script Need following inputs
-	1. Input Patran output report file(Formet fo the report file is shown below)
-	2. Pataran group session file.
-	3. Optional: Name of the Group (Element connected cfast) if you want to omit statin in the elements connected to CFAST.
+	1. Input Patran output report file (Format of the report file is shown below)
+	2. Patran group session file.
+	3. Optional: Name of the Group (Element connected CFAST) if you want to omit strain in the elements connected to CFAST.
 
 Patran Rpt file format:
                        MSC.Patran 19.1.164499 Mon Oct 15 14:16:55 PDT 2012 - Analysis Code: MSC.Nastran 
@@ -29,8 +29,8 @@ Patran Rpt file format:
 	
 OUTPUTFILE:
 	1. PRT FILE NAME +'_StrainResults.txt' : Critical Strain results for each group availabe in the input 2. 
-											If element results missing in Input 1,Missing element results information is written in the Outputfile 3.
-	2. PRT FILE NAME +'_summary.txt' : Critical strain results for each elements in the Inputfile 1.
+											If element results missing in Input 1, Missing element results information is written in the Output file 3.
+	2. PRT FILE NAME +'_summary.txt' : Critical strain results for each elements in the Input file 1.
 	3. PRT FILE NAME +'_logfile.txt' : information about missing element results
 	
 Example of the OUTPUT1:

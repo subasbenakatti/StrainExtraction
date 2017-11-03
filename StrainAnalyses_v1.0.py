@@ -52,7 +52,7 @@ def ExtractCriticalStrain(RptFile):
 		Summary[Elm]=[Elm, max(MaxP),LoadCaseList[MaxP.index(max(MaxP))], min(MinP),LoadCaseList[MinP.index(min(MinP))]]
 	
 	OutFile = open(RptFile.replace('.rpt','')+'_summary.txt','w')
-	OutFile.write('ElementID\tMaxPrincipalStrain\tMaxP LoadCase\tMinPrincipalStrain\tMinP LoadCase\n')
+	OutFile.write('ElementID\t MaxPrincipalStrain\t MaxP LoadCase\t MinPrincipalStrain\t MinP LoadCase\n')
 	for elm in Summary:
 		OutFile.write('%s\t%f\t%s\t%f\t%s\n'%(Summary[elm][0],Summary[elm][1],Summary[elm][2],Summary[elm][3],Summary[elm][4]))
 	OutFile.close()
@@ -147,11 +147,11 @@ def StrainAnalyses():
 			else:
 				MissingElm = ListA_minus_B(Group[grp]['Element'],ResultsElementsList)
 				if len(MissingElm) == len(Group[grp]['Element']) :
-					LogFile.write('Group: %s not analyses, All Elements results not availabe in input RPT\n' %grp)
+					LogFile.write('Group: %s not analyses, All Elements results not available in input RPT\n' %grp)
 					continue
 				elif len(MissingElm)> 0 :
 					for Melm in MissingElm:
-						LogFile.write('In Group: %s Element: %s results not availabe in input RPT\n' %(grp,Melm))
+						LogFile.write('In Group: %s Element: %s results not available in input RPT\n' %(grp,Melm))
 					Group[grp]['Element'] = ListA_minus_B(Group[grp]['Element'],MissingElm)
 			
 			ResultsSummary[grp]=[]
@@ -169,11 +169,11 @@ def StrainAnalyses():
 			else:
 				MissingElm = ListA_minus_B(Group[grp]['Element'],ResultsElementsList)
 				if len(MissingElm) == len(Group[grp]['Element']) :
-					LogFile.write('Group: %s not analyses, All Elements results not availabe in input RPT\n' %grp)
+					LogFile.write('Group: %s not analyses, All Elements results not available in input RPT\n' %grp)
 					continue
 				elif len(MissingElm)> 0 :
 					for Melm in MissingElm:
-						LogFile.write('In Group: %s Element: %s results not availabe in input RPT\n' %(grp,Melm))
+						LogFile.write('In Group: %s Element: %s results not available in input RPT\n' %(grp,Melm))
 					Group[grp]['Element'] = ListA_minus_B(Group[grp]['Element'],MissingElm)
 					
 			ResultsSummary[grp]=[]
@@ -185,7 +185,7 @@ def StrainAnalyses():
 			ResultsSummary[grp]=[ElList[MaxP.index(max(MaxP))], max(MaxP),MaxPLC[MaxP.index(max(MaxP))],ElList[MinP.index(min(MinP))], min(MinP),MinPLC[MinP.index(min(MinP))]]
 	
 	OUT=open(RptFile.replace('.rpt','')+'_StrainResults.txt','w')
-	OUT.write('GroupName\t MaxP ElementID\tMaxPrincipalStrain\tMaxP LoadCase\tMinP ElementID\tMinPrincipalStrain\tMinP LoadCaseID\n')
+	OUT.write('GroupName\t MaxP ElementID\t MaxPrincipalStrain\t MaxP LoadCase\t MinP ElementID\t MinPrincipalStrain\t MinP LoadCaseID\n')
 	for key in ResultsSummary:
 		OUT.write('%s\t%s\t%s\t%s\t%s\t%s\t%s\n'%(key,ResultsSummary[key][0],ResultsSummary[key][1],ResultsSummary[key][2],ResultsSummary[key][3],ResultsSummary[key][4],ResultsSummary[key][5]))
 	OUT.close()
