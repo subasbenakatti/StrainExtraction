@@ -1,6 +1,7 @@
 Name: Subas Benakatti
 Email: subas.benakatti@gmail.com
 
+
 INPUTS:
 
 Script Need following inputs
@@ -10,7 +11,7 @@ Script Need following inputs
 
 Patran Rpt file format:
                        MSC.Patran 19.1.164499 Mon Oct 15 14:16:55 PDT 2012 - Analysis Code: MSC.Nastran 
-                           Load Case: SC8000000: A320NEO SL +12G,ETAF 00, TEMP RT, A1:Static Subcase 
+                           Load Case: SC12345678: xyz 
                                              Result Strain Tensor,  - Layer At Z1 
                                                      Entity: Element Tensor
 
